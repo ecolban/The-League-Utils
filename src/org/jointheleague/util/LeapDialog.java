@@ -130,7 +130,8 @@ public class LeapDialog {
 	 *            The possible options that the user may choose from in the
 	 *            order that they shall appear in the dialog window. There must
 	 *            be at least one option.
-	 * @return The option that the user chose.
+	 * @return The option that the user chose. It is one of the options provided
+	 *         as argument to this method.
 	 * @throws InterruptedException
 	 *             if the dialog is interrupted before the user has clicked on a
 	 *             button.

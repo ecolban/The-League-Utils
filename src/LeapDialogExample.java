@@ -2,10 +2,17 @@ import org.jointheleague.util.LeapDialog;
 import org.jointheleague.util.LeapDialog.Option;
 
 public class LeapDialogExample {
+
 	public static void main(String[] args) {
+
+		testRun();
+
+	}
+
+	private static void testRun() {
 		try {
 			// Get some input from the user as a String:
-			
+
 			String name = LeapDialog.getInput("What's your first name:");
 			System.out.println(String.format("Your first name is %s.", name));
 
@@ -20,10 +27,11 @@ public class LeapDialogExample {
 			// Let the user respond with a button click (list the options in
 			// the preferred order):
 			Option.YES.setString("YEAH");
-			Option.NO.setString("DEFINITLY NOT!!!");
+			Option.NO.setString("DEFINITELY NOT!!!");
 			Option.MAY_BE.setString("NAH...");
-			Option opt = LeapDialog.choose("Was that fun?", Option.YES, Option.MAY_BE,
-			        Option.NO, Option.CANCEL);
+			Option.CANCEL.setString("LATER");
+			Option opt = LeapDialog.choose("Was that fun?",
+			        Option.YES, Option.MAY_BE, Option.NO, Option.CANCEL);
 			switch (opt) {
 			case YES:
 				System.out.println("I like positive people!");
